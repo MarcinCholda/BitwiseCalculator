@@ -1,16 +1,10 @@
-﻿namespace BitwiseCalculator
+﻿namespace KalkulatorBitowy
 {
     partial class MainWindow
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
+
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -65,37 +59,38 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Expression:";
+            this.label1.Text = "Liczba:";
             // 
             // tbxDec
             // 
             this.tbxDec.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxDec.Location = new System.Drawing.Point(66, 61);
+            this.tbxDec.Location = new System.Drawing.Point(78, 61);
             this.tbxDec.Name = "tbxDec";
             this.tbxDec.ReadOnly = true;
-            this.tbxDec.Size = new System.Drawing.Size(315, 20);
+            this.tbxDec.Size = new System.Drawing.Size(303, 20);
             this.tbxDec.TabIndex = 3;
+            this.tbxDec.TextChanged += new System.EventHandler(this.TbxDec_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Decimal :";
+            this.label2.Text = "Dziesietnie :";
             // 
             // tbxHex
             // 
             this.tbxHex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxHex.Location = new System.Drawing.Point(66, 85);
+            this.tbxHex.Location = new System.Drawing.Point(78, 85);
             this.tbxHex.Name = "tbxHex";
             this.tbxHex.ReadOnly = true;
-            this.tbxHex.Size = new System.Drawing.Size(315, 20);
+            this.tbxHex.Size = new System.Drawing.Size(303, 20);
             this.tbxHex.TabIndex = 3;
             // 
             // label3
@@ -111,10 +106,10 @@
             // 
             this.tbxBin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxBin.Location = new System.Drawing.Point(66, 109);
+            this.tbxBin.Location = new System.Drawing.Point(78, 109);
             this.tbxBin.Name = "tbxBin";
             this.tbxBin.ReadOnly = true;
-            this.tbxBin.Size = new System.Drawing.Size(315, 20);
+            this.tbxBin.Size = new System.Drawing.Size(303, 20);
             this.tbxBin.TabIndex = 3;
             // 
             // label4
@@ -122,9 +117,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(21, 112);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Binary :";
+            this.label4.Text = "Binarnie :";
             // 
             // cbxAutoCalc
             // 
@@ -133,9 +128,9 @@
             this.cbxAutoCalc.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbxAutoCalc.Location = new System.Drawing.Point(244, 12);
             this.cbxAutoCalc.Name = "cbxAutoCalc";
-            this.cbxAutoCalc.Size = new System.Drawing.Size(135, 17);
+            this.cbxAutoCalc.Size = new System.Drawing.Size(133, 17);
             this.cbxAutoCalc.TabIndex = 5;
-            this.cbxAutoCalc.Text = "Automatically Calculate";
+            this.cbxAutoCalc.Text = "Przelicz automatycznie";
             this.cbxAutoCalc.UseVisualStyleBackColor = true;
             // 
             // MainWindow
@@ -158,7 +153,8 @@
             this.MaximumSize = new System.Drawing.Size(800, 208);
             this.MinimumSize = new System.Drawing.Size(350, 208);
             this.Name = "MainWindow";
-            this.Text = "Cute Little Bitwise Calculator";
+            this.Text = "Kalkulator Bitowy";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainWindow_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -7,7 +7,7 @@
     <ProjectGuid>{7BF6871E-8C66-409F-9658-69F476EDADDD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>BitwiseCalculator</RootNamespace>
-    <AssemblyName>BitwiseCalculator</AssemblyName>
+    <AssemblyName>Kalkulator Bitowy</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -55,7 +55,9 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="..\..\..\..\..\Desktop\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

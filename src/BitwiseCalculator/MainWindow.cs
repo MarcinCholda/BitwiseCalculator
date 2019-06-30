@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace BitwiseCalculator
+namespace KalkulatorBitowy
 {
     public partial class MainWindow : Form
     {
@@ -94,6 +94,15 @@ namespace BitwiseCalculator
             tbxBin.Text = result.ToBinary(' ', 4);
         }
 
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TbxDec_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
